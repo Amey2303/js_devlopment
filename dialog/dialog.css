@@ -1,0 +1,35 @@
+h3, p {
+    color: white;
+    
+}
+#dialogContainer {
+width: 30%;    
+height: 100%;
+margin-left: 30%;
+display: none;
+}
+.dialog {
+    background-color: Brown;
+ border-radius: 15px;   
+ padding: 20px;
+}
+#close {
+    position: absolute;
+    top: 110px;
+    left: 730px;
+    background-color: red;
+    color: white;
+    Font-size: 15px;
+    border: 1px solid white;
+    margin : 0px;
+    padding: 2px;
+    border-radius: 10px;
+}
+.btn {
+    background-color: red;
+    color: white;
+    Font-size: 15px;
+    border: 1px solid white;
+    width : 80px;
+    margin: 2px;
+}

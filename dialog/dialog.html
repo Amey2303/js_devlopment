@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dialog</title>
+    <link rel="stylesheet" href="dialog.css">
+</head>
+<body>
+    <h1>Dialog</h1>
+    <button id="openDialog" onclick="show()">Delete me</button>
+    <div id="dialogContainer">
+        <div id="dialog" class="dialog" aria-labelledby="dialogHeading" >
+            <button id="close" aria-label="Close" onclick="closedialog() ">X</button>
+<h3 id="dialogHeading">Confirm</h3>
+<p>Are you sure you want to delete this item</p>
+<button id="yesBtn" class="btn">Yes</button>
+<button id="noBtn" class="btn" onclick="closedialog() ">No</button>
+        </div>
+    </div>
+    <button>save</button>
+    <a href="www.google.com">Google</a>
+    <script src="dialog.js"></script>
+</body>
+</html>
