@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form validation</title>
+</head>
+<body>
+    <h1>Form validation with HTML</h1>
+    <form method="get" action="result.html">
+        <label for="fname">First name</label><br>
+        <input id="fname" name="fname" type="text" required autocomplete="given_name" pattern="[a-zA-Z]+"><br>
+        <label for="lname">Last name</label><br>
+        <input id="lname" name="lname" type="text" required autocomplete="family_name" pattern="[a-zA-Z]+"><br>
+        <label for="age">Age</label><br>
+        <input id="age" name="age" type="number" required min="0" max="120"><br>
+<label for="bdate">Date of Birth</label><br>
+<input id="bdate" name="bdate" type="date" required><br>
+        <fieldset>
+            <legend> Gender</legend>
+            <input id="male" name="gender" value="male" required type="radio">
+            <label for="male">Male</label><br>
+            <input id="female" name="gender" value="female" required type="radio">
+            <label for="female">Female</label><br>
+        </fieldset>
+        <label for="phone">Phone number</label><br>
+        <input id="phone" name="phone" type="tel" required pattern="[0-9][10]"><br>
+<label for="email">Email Id</label><br>
+<input id="email" name="email" type="email" required autocomplete="email"><br>
+<label for="password">Password</label><br>
+<input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$" required minlength="8" maxlength="35">
+        <input value="submit" type="submit">
+        
+    </form>
+</body>
+</html>
