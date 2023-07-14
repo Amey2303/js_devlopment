@@ -1,7 +1,12 @@
 #tablist {
     display: flex;
-}
-.tab {
-    width : 10%;
+  }
+  
+  .tab {
+    width: 10%;
     height: 39px;
+  }
+  
+.tabpannel {
+    display: none;
 }

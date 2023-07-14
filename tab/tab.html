@@ -9,23 +9,24 @@
 <body>
     <h1>Tab</h1>
     <div id="tabcontainer">
-        <div id="tablist" class="tablist" >
-    <button   role="tab" aria-selected="true"  type="button" id="tab1" class="tab" tabindex="0">greet</button><br>
-    <button  role="tab"  type="button" id="tab2" class="tab" tabindex="-1">Name</button><br>
-    <button  role="tab"  type="button" id="tab3" class="tab" tabindex="-1">Question</button><br>
-</div>
-<div id="tabpannel" class="tabpannel">
-    <div id="pannel1" class="tabpannels" role="tabpanel" aria-labelledby="tab1">
-<p>Hello</p>
-    </div>
-    <div id="pannel2" class="tabpannels" role="tabpanel" aria-labelledby="tab2">
-<p>Amey Rane!</p>
-    </div>
-    <div id="pannel3" class="tabpannels" role="tabpanel" aria-labelledby="tab3">
-<p>How you doing?</p>
-    </div>
-
-</div>
+        <div id="tablist" class="tablist">
+            <button role="tab" aria-selected="true" class="tab" tabindex="0">Greet</button>
+            <button role="tab" class="tab" tabindex="-1">Name</button>
+            <button role="tab" class="tab" tabindex="-1">Question</button>
+          </div>
+          
+          <div id="tabpannel-container">
+            <div id="pannel1" class="tabpannel" role="tabpanel" aria-labelledby="tab1">
+              <p>Hello</p>
+            </div>
+            <div id="pannel2" class="tabpannel" role="tabpanel" aria-labelledby="tab2">
+              <p>Amey Rane!</p>
+            </div>
+            <div id="pannel3" class="tabpannel" role="tabpanel" aria-labelledby="tab3">
+              <p>How are you doing?</p>
+            </div>
+          </div>
+          
 </div>
 <script src="tab.js"></script>
 </body>
