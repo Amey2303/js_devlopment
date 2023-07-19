@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-state checkbox</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tri-state checkbox</h1>
+    <div id="container">
+        <div id="parentCheckBox">
+            <label><input type="checkbox" id="selectAllCheckbox" name="selectall"> Select All</label><br>
+        </div>
+        <div id="childCheckBox">
+            <ul>
+                <li><label><input type="checkbox" id="iosCheckBox" name="ioscheckbox" >IOS</label></li>
+                <li><label><input type="checkbox" id="androidCheckBox" name="androidcheckbox" >Android</label></li>
+                <li><label><input type="checkbox" id="windowsCheckBox" name="windowscheckbox" >Windows</label></li>
+            </ul>
+        </div>
+    </div>
+    <script src="tristatecheckbox.js"></script>
+</body>
+</html>
