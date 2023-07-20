@@ -103,9 +103,19 @@ for(let j = 0; j < focusableElements.length; j++){
         // Function to set the focus on the next or previous element
         function setFocus(index) {
             if (index >= 0 && index < focusableElements.length) {
-                focusableElements[index].focus();
+for(let l = 0; l < focusableElements.length; l++){
+  if(l === index) {
+    focusableElements[l].focus();
+    focusableElements[l].tabIndex = "0";
+  } else {
+    focusableElements[l].tabIndex = "-1";
+  }
+}
+
+
             }
-        }
+
+          }
 
         // Add event listener for keydown on the grid container
                 gridContainer.addEventListener("keydown", rov);
