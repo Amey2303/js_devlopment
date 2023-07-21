@@ -106,9 +106,11 @@ for(let j = 0; j < focusableElements.length; j++){
 for(let l = 0; l < focusableElements.length; l++){
   if(l === index) {
     focusableElements[l].focus();
-    focusableElements[l].tabIndex = "0";
+    // focusableElements[l].tabIndex = "0";
+focusableElements[l].setAttribute("tabindex", "0");
   } else {
-    focusableElements[l].tabIndex = "-1";
+    // focusableElements[l].tabIndex = "-1";
+focusableElements[l].setAttribute("tabIndex", "-1");
   }
 }
 
