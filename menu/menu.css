@@ -1,0 +1,12 @@
+.menu {
+    display: none;
+}
+.menuitem {
+    border: 2px solid black;
+    margin: 0px;
+    width : 25%;
+    
+}
+.menuButton {
+    margin:0px;
+}
