@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0xp;
+}
+#input{
+width: 25%;
+height: 30px;
+border: 2px solid black;
+border-radius: 3px;
+margin-bottom: 3px;
+}
+ul {
+    list-style:none;
+}
+
+.options {
+    display: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List box</title>
+    <link rel="stylesheet" href="listbox.css"
+</head>
+<body>
+    <h1>List box</h1>
+    <div id="listboxcontainer">
+        <div id="listbox" class="dropdown">
+            <span id="label">Select your country</span><br>
+            <div id="input" class="input" aria-labelledby="label" role="combobox" aria-haspopup="listbox" aria-expanded="false" tabindex="0"></div>
+            <div id="listboxoptionscontainer">
+                <ul role="none" id="listboxoptions" >
+                    <li id="option0" class="options" role="option" value="0" tabindex="-1" >Select your country</li>
+                    <li id="option1" class="options" role="option" value="1" tabindex="-1" aria-selected="false" >India</li>
+                    <li id="option2" class="options" role="option" value="2" tabindex="-1" aria-selected="false" >USA</li>
+                    <li id="option3" class="options" role="option" value="3" tabindex="-1" aria-selected="false" >UK</li>
+                    <li id="option4" class="options" role="option" value="4" tabindex="-1" aria-selected="false" >Russia</li>
+                    <li id="option5" class="options" role="option" value="5" tabindex="-1" aria-selected="false" >China</li>
+                    <li id="option6" class="options" role="option" value="6" tabindex="-1" aria-selected="false" >Norway</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="listbox.js"></script>
+</body>
+</html>
