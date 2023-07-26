@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu_aria_activedescendent.css">
+</head>
+<body>
+    <h1>Menu button with aria-activedescendent</h1>
+    <button type="button" id="menubtn" class="menubtn" aria-expanded="false" aria-haspopup="menu" aria-activedescendant="menuitem1"  >Profile</button>
+    <div id="dropdown" class="menuitem" role="menu">
+        <span id="menuitem1" class="menuitem" role="menuitem" value="instagram">Instagram</span><br>
+        <span id="menuitem2" class="menuitem" role="menuitem" value="Facebook">Facebook</span><br>
+        <span id="menuitem3" class="menuitem" role="menuitem" value="snapchat">Snapchat</span><br>
+        <span id="menuitem4" class="menuitem" role="menuitem" value="twitter">Twitter</span><br>
+    </div>
+    <script src="menu_aria_activedescendent.js"></script>
+</body>
+</html>
