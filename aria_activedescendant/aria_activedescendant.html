@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria-activdescendant</title>
+</head>
+<body>
+    <h1>Aria-activedescendant</h1>
+    <div role="listbox" tabindex="0" id="selectColour" aria-label="Select Colour" aria-activedescendant="option1">
+        <span role="option" id="option1" class="option" aria-selected="false">Red</span><br>
+        <span role="option" id="option2" class="option" aria-selected="false">Blue</span><br>
+        <span role="option" id="option3" class="option" aria-selected="false">Green</span><br>
+    </div>
+    <script>
+        let listBox = document.getElementById("selectColour");
+        let options = listBox.querySelectorAll(".option");
+
+        // Define the function for keyboard navigation
+        function keyboardnavigation(event) {
+            if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+                event.preventDefault();
+
+                let currentIndex = -1;
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i] === document.activeElement) {
+                        currentIndex = i;
+                        break;
+                    }
+                }
+
+                if (currentIndex !== -1) {
+                    let nextIndex;
+                    if (event.key === "ArrowUp") {
+                        event.preventDefault();
+                        nextIndex = currentIndex === 0 ? options.length - 1 : currentIndex - 1;
+                    } else if (event.key === "ArrowDown") {
+                        event.preventDefault();
+                        nextIndex = currentIndex === options.length - 1 ? 0 : currentIndex + 1;
+                    }
+
+                    options[nextIndex].focus();
+                    options[nextIndex].setAttribute("aria-selected", "true");
+                    options[currentIndex].setAttribute("aria-selected", "false");
+                    listBox.setAttribute("aria-activedescendant", options[nextIndex].id);
+                }
+            }
+        }
+
+        // Adding event listener to set focus and attach keydown event to options
+        function addevent() {
+            if (listBox === document.activeElement) {
+                options[0].focus();
+                options.forEach(option => {
+                    option.addEventListener("keydown", keyboardnavigation);
+                });
+            }
+        }
+        listBox.addEventListener('focus', addevent);
+    </script>
+</body>
+</html>
